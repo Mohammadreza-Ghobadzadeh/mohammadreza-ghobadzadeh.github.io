@@ -1,0 +1,3090 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Mohammadreza Ghobadzadeh - electrical engineering graduate student at the University of Tehran.">
+
+  <title>Mohammadreza Ghobadzadeh | electrical engineering</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    /* =========================================================
+       THEME VARIABLES
+    ========================================================= */
+
+    :root {
+
+      --bg: #f4f7fb;
+
+      --surface: rgba(255, 255, 255, 0.68);
+
+      --text: #202936;
+
+      --muted: #667180;
+
+      --line: rgba(61, 76, 92, 0.14);
+
+      --accent: #315f8c;
+
+      --accent2: #173b5f;
+
+      --shadow: rgba(31, 45, 61, 0.08);
+
+      --max: 1280px;
+
+    }
+
+
+    /*
+      DARK MODE
+    */
+
+    :root[data-theme="dark"] {
+
+      --bg: #0b1017;
+
+      --surface: rgba(24, 31, 41, 0.72);
+
+      --text: #edf2f7;
+
+      --muted: #a9b4c1;
+
+      --line: rgba(165, 187, 208, 0.14);
+
+      --accent: #8dbde5;
+
+      --accent2: #b4d8f3;
+
+      --shadow: rgba(0, 0, 0, 0.30);
+
+    }
+
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    * {
+
+      box-sizing: border-box;
+
+      transition:
+        background-color 0.30s ease,
+        border-color 0.30s ease,
+        color 0.30s ease,
+        box-shadow 0.30s ease;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      margin: 0;
+
+      color: var(--text);
+
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.7;
+
+
+      background:
+
+        radial-gradient(circle at 8% 5%,
+          rgba(50, 120, 200, 0.30),
+          transparent 30%),
+
+        radial-gradient(circle at 92% 15%,
+          rgba(40, 100, 190, 0.25),
+          transparent 28%),
+
+        radial-gradient(circle at 50% 100%,
+          rgba(60, 130, 210, 0.20),
+          transparent 35%),
+
+        linear-gradient(135deg,
+          #f5f9ff 0%,
+          #e0ebff 42%,
+          #c5d9ff 72%,
+          #eaf2ff 100%);
+
+      background-attachment: fixed;
+
+    }
+
+
+    :root[data-theme="dark"] body {
+
+      background:
+
+        radial-gradient(circle at 10% 5%,
+          rgba(48, 111, 163, 0.23),
+          transparent 30%),
+
+        radial-gradient(circle at 88% 20%,
+          rgba(91, 66, 133, 0.18),
+          transparent 28%),
+
+        radial-gradient(circle at 50% 100%,
+          rgba(35, 91, 116, 0.12),
+          transparent 34%),
+
+        linear-gradient(135deg,
+          #080d14 0%,
+          #101721 48%,
+          #0b1119 100%);
+
+      background-attachment: fixed;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    /* =========================================================
+       Blue-colored links for visual distinction
+    ========================================================= */
+
+    .exp-link {
+
+      color: var(--accent);
+
+      text-decoration: underline;
+
+      text-underline-offset: 2px;
+
+    }
+
+
+    .exp-link:hover {
+
+      color: var(--accent2);
+
+      text-decoration: none;
+
+    }
+
+
+    .wrap {
+
+      width: 100%;
+
+      max-width: var(--max);
+
+      margin: 0 auto;
+
+      padding: 0 24px;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 10;
+
+      background:
+        color-mix(in srgb,
+          var(--bg) 88%,
+          transparent);
+
+      backdrop-filter:
+        blur(16px);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    nav {
+
+      height: 68px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    .links {
+
+      display: flex;
+
+      gap: 26px;
+
+      font-size: 14px;
+
+      color: var(--muted);
+
+    }
+
+
+    .links a {
+
+      position: relative;
+
+      transition:
+        color 0.2s ease;
+
+    }
+
+
+    .links a:hover {
+
+      color: var(--accent);
+
+    }
+
+
+    .links a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -7px;
+
+      width: 0;
+
+      height: 1px;
+
+      background: var(--accent);
+
+      transition:
+        width 0.25s ease;
+
+    }
+
+
+    .links a:hover::after {
+
+      width: 100%;
+
+    }
+
+
+    .theme-toggle {
+
+      width: 42px;
+
+      height: 42px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 11px;
+
+      background:
+        var(--surface);
+
+      backdrop-filter:
+        blur(12px);
+
+      color:
+        var(--text);
+
+      cursor: pointer;
+
+      display: grid;
+
+      place-items: center;
+
+      font-size: 18px;
+
+      flex: none;
+
+      box-shadow:
+        0 8px 24px var(--shadow);
+
+    }
+
+
+    .theme-toggle:hover {
+
+      border-color:
+        var(--accent);
+
+      transform:
+        translateY(-1px);
+
+    }
+
+
+    .nav-right {
+
+      display: flex;
+
+      align-items: center;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+
+      padding:
+        45px 0 70px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr) 380px;
+
+      gap: 60px;
+
+      align-items: start;
+
+    }
+
+
+    .eyebrow {
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      letter-spacing:
+        0.13em;
+
+      text-transform:
+        uppercase;
+
+      color:
+        var(--accent);
+
+    }
+
+
+    h1 {
+
+      white-space: nowrap;
+
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(50px,
+          8vw,
+          86px);
+
+      line-height:
+        0.98;
+
+      letter-spacing:
+        -0.055em;
+
+      margin:
+        16px 0 25px;
+
+    }
+
+
+    .hero p {
+
+      max-width:
+        760px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        18px;
+
+      /* Keep justification while preventing exaggerated word gaps. */
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      word-break: normal;
+      word-spacing: normal;
+
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .buttons {
+
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+      margin-top: 28px;
+
+    }
+
+
+    .btn {
+
+      padding:
+        11px 17px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        9px;
+
+      font-size:
+        14px;
+
+      font-weight:
+        600;
+
+      background:
+        var(--surface);
+
+      backdrop-filter:
+        blur(10px);
+
+      box-shadow:
+        0 7px 20px var(--shadow);
+
+    }
+
+
+    .btn:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 28px var(--shadow);
+
+    }
+
+
+    .btn.primary {
+
+      background:
+        var(--accent2);
+
+      border-color:
+        var(--accent2);
+
+      color:
+        white;
+
+    }
+
+
+    :root[data-theme="dark"] .btn.primary {
+
+      background:
+        #d7e8f6;
+
+      border-color:
+        #d7e8f6;
+
+      color:
+        #13283b;
+
+    }
+
+
+    /* =========================================================
+       PORTRAIT
+    ========================================================= */
+
+    .portrait {
+
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio:
+        3 / 4;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        22px;
+
+      border:
+        1px solid var(--line);
+
+      background:
+        linear-gradient(145deg,
+          #e9edf0,
+          #d7dde2);
+
+      box-shadow:
+        0 22px 55px var(--shadow);
+
+      align-self: start;
+      margin-top: 120px;
+
+    }
+
+
+    .portrait img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        contain;
+
+      border-radius:
+        inherit;
+
+    }
+
+
+    :root[data-theme="dark"] .portrait {
+
+      background:
+        linear-gradient(145deg,
+          #273442,
+          #18222e);
+
+      border-color:
+        rgba(165,
+          187,
+          208,
+          0.18);
+
+    }
+
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    section {
+
+      padding:
+        12px 0;
+
+    }
+
+
+    .section-title {
+
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
+
+      font-size:
+        38px;
+
+      letter-spacing:
+        -0.03em;
+
+      margin:
+        0 0 24px;
+
+    }
+
+
+    /* =========================================================
+       Box container for major sections, similar to skills boxes
+    ========================================================= */
+
+    .section-box {
+
+      background: var(--surface);
+
+      backdrop-filter: blur(14px);
+
+      border: 1px solid var(--line);
+
+      border-radius: 16px;
+
+      padding: 24px 28px;
+
+      box-shadow: 0 12px 35px var(--shadow);
+
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .timeline {
+
+      border-left:
+        1px solid var(--line);
+
+      margin-left:
+        7px;
+
+    }
+
+
+    .item {
+
+      position:
+        relative;
+
+      padding:
+        0 0 38px 28px;
+
+    }
+
+
+    .item:last-child {
+
+      padding-bottom: 0;
+
+    }
+
+
+    .item::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        -5px;
+
+      top:
+        8px;
+
+      width:
+        9px;
+
+      height:
+        9px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--accent);
+
+      box-shadow:
+        0 0 0 5px color-mix(in srgb,
+          var(--accent) 12%,
+          transparent);
+
+    }
+
+
+    .date {
+
+      font-size:
+        13px;
+
+      color:
+        var(--accent);
+
+      font-weight:
+        700;
+
+    }
+
+
+    .item h3 {
+
+      margin:
+        4px 0 2px;
+
+      font-size:
+        18px;
+
+    }
+
+
+    .item .place {
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+    }
+
+
+    .item p {
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+      margin:
+        8px 0 0;
+
+    }
+
+
+    /* =========================================================
+       HIGHLIGHT KEYWORDS (like blue text in PDF)
+    ========================================================= */
+
+    .highlight {
+
+      color: var(--accent);
+
+      font-weight: 600;
+
+    }
+
+
+    /* =========================================================
+       PUBLICATIONS
+    ========================================================= */
+
+    .publications-intro {
+
+      color:
+        var(--muted);
+
+      margin:
+        -10px 0 28px;
+
+    }
+
+
+    .pub {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        300px 1fr;
+
+      gap:
+        22px;
+
+      align-items:
+        stretch;
+
+      margin-bottom:
+        20px;
+
+    }
+
+
+    .pub-image {
+
+      min-height:
+        175px;
+
+      overflow:
+        hidden;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        12px;
+
+      background:
+        rgba(220,
+          232,
+          242,
+          0.45);
+
+      box-shadow:
+        0 12px 35px var(--shadow);
+
+    }
+
+
+    .pub-image a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .pub-image img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      display:
+        block;
+
+      object-fit:
+        cover;
+
+      transition: transform 0.2s ease;
+    }
+
+    .pub-image a:hover img {
+      transform: scale(1.02);
+    }
+
+
+    .pub-content {
+
+      position:
+        relative;
+
+      background:
+        var(--surface);
+
+      backdrop-filter:
+        blur(14px);
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        12px;
+
+      padding:
+        20px 22px;
+
+      min-height:
+        175px;
+
+      box-shadow:
+        0 12px 35px var(--shadow);
+
+    }
+
+
+    .pub-header {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap:
+        20px;
+
+    }
+
+
+    .pub h3 {
+
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
+
+      font-size:
+        21px;
+
+      line-height:
+        1.35;
+
+      margin:
+        0 0 7px;
+
+      color:
+        var(--accent);
+
+    }
+
+
+    .pub-year {
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+
+      font-weight:
+        700;
+
+      white-space:
+        nowrap;
+
+    }
+
+
+    .pub p {
+
+      margin:
+        0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+    }
+
+
+    .pub-authors strong {
+
+      color:
+        var(--text);
+
+    }
+
+    /* First-author comma: regular weight and flush against the name */
+    .pub-authors strong.first-author::after {
+      content: ",";
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+
+    .pub-venue {
+
+      margin-top:
+        6px !important;
+
+    }
+
+    .pub-journal {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+
+    .pub-buttons {
+
+      display:
+        flex;
+
+      gap:
+        8px;
+
+      flex-wrap:
+        wrap;
+
+      margin-top:
+        15px;
+
+    }
+
+
+    .pub-btn {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      gap:
+        7px;
+
+      padding:
+        7px 12px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        8px;
+
+      font-size:
+        12px;
+
+      font-weight:
+        600;
+
+      color:
+        var(--muted);
+
+      background:
+        transparent;
+
+    }
+
+
+    .pub-btn:hover {
+
+      color:
+        var(--text);
+
+      border-color:
+        var(--accent);
+
+      background:
+        color-mix(in srgb,
+          var(--accent) 7%,
+          transparent);
+
+    }
+
+
+    /* =========================================================
+       EXPERIENCE (with date first and colored links)
+    ========================================================= */
+
+    .experience {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr;
+
+      gap:
+        0;
+
+    }
+
+
+    .experience-item {
+
+      position:
+        relative;
+
+      padding:
+        0 0 38px 28px;
+
+      border-left:
+        1px solid var(--line);
+
+    }
+
+
+    .experience-item:last-child {
+
+      padding-bottom:
+        0;
+
+    }
+
+
+    .experience-item::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        -5px;
+
+      top:
+        10px;
+
+      width:
+        9px;
+
+      height:
+        9px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--accent);
+
+      box-shadow:
+        0 0 0 5px color-mix(in srgb,
+          var(--accent) 12%,
+          transparent);
+
+    }
+
+
+    .experience-header {
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .exp-headline {
+
+      font-size: 16px;
+
+      font-weight: 600;
+
+      line-height: 1.6;
+
+    }
+
+
+    .exp-headline .exp-date {
+
+      color: var(--accent);
+
+      font-weight: 700;
+
+    }
+
+
+    .exp-headline .exp-pipe {
+
+      color: var(--muted);
+
+      margin: 0 6px;
+
+    }
+
+
+    .exp-headline .exp-title {
+
+      font-weight: 600;
+
+    }
+
+
+    .exp-sub {
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      margin: 12px 0 4px 0;
+
+      color: var(--text);
+
+    }
+
+
+    .exp-desc {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      margin: 0 0 10px 0;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================================
+       WORKSHOPS
+    ========================================================= */
+
+    .workshop-item .exp-date {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .workshop-item .exp-title {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .skill-degree {
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 28px;
+      box-shadow: 0 12px 35px var(--shadow);
+    }
+
+    .skill-degree h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 26px;
+      margin: 0 0 4px 0;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .skill-degree .degree-place {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .skill-degree .skill-block {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .skill-degree .skill-block::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .skill-degree .skill-block:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Skill categories without Expert In / Familiar with labels:
+       show their items on the next visual line. */
+    .skill-degree .skill-block:not(:has(.skill-sub))>.skill-items {
+      display: block;
+      margin-top: 6px;
+    }
+
+    .skill-degree .skill-label {
+      font-weight: 700;
+      color: var(--text);
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .skill-degree .skill-items {
+      color: var(--muted);
+    }
+
+    .skill-degree .skill-items .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .skill-degree .skill-sub {
+      margin-top: 6px;
+      padding-left: 10px;
+    }
+
+    .skill-degree .skill-sub .skill-label {
+      font-weight: 700;
+      color: var(--text);
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-text {
+
+      color:
+        var(--muted);
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+
+      padding:
+        35px 0 55px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+
+      text-align: center;
+
+    }
+
+
+    /* =========================================================
+       JUSTIFY TEXT (user request)
+    ========================================================= */
+
+    .hero p,
+    .item p,
+    .pub p,
+    .exp-desc,
+    .contact-text,
+    .exp-headline,
+    .exp-sub {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    /* The introductory text gets its own wrapping rules so
+       justification does not create unusually large word gaps. */
+    .hero p {
+      hyphens: auto;
+      overflow-wrap: break-word;
+      word-break: normal;
+      word-spacing: normal;
+    }
+
+
+    /* =========================================================
+       Course list inside Teaching Assistant items
+    ========================================================= */
+
+    .course-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .course-list li {
+      margin-bottom: 4px;
+    }
+
+    .course-label {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .hero {
+
+        grid-template-columns:
+          1fr;
+
+        padding-top:
+          40px;
+
+      }
+
+
+      .portrait {
+
+        max-width:
+          300px;
+
+        width:
+          100%;
+
+        margin-top:
+          20px;
+
+      }
+
+
+      .links {
+
+        display:
+          none;
+
+      }
+
+
+      .pub {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .pub-image {
+
+        min-height:
+          210px;
+
+      }
+
+
+      .course-list {
+
+        padding-left: 16px;
+
+      }
+
+
+      .skills-container {
+
+        gap: 20px;
+
+      }
+
+
+      footer {
+
+        flex-direction:
+          column;
+
+        gap:
+          8px;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      h1 {
+        white-space: normal;
+      }
+
+      .wrap {
+
+        padding:
+          0 18px;
+
+      }
+
+
+      .hero {
+
+        padding:
+          35px 0 50px;
+
+      }
+
+
+      h1 {
+
+        font-size:
+          58px;
+
+      }
+
+
+      .hero p {
+
+        font-size:
+          16px;
+
+      }
+
+
+      section {
+
+        padding:
+          10px 0;
+
+      }
+
+
+      .section-title {
+
+        font-size:
+          32px;
+
+      }
+
+
+      .section-box {
+
+        padding:
+          20px 18px;
+
+      }
+
+
+      .pub-header,
+      .experience-header,
+      .teaching-card-header {
+
+        flex-direction:
+          column;
+
+        gap:
+          4px;
+
+      }
+
+
+      .pub-year,
+      .experience-date,
+      .teaching-date {
+
+        white-space:
+          normal;
+
+      }
+
+
+      .pub-content {
+
+        padding:
+          18px;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ========================================================
+       HEADER
+  ======================================================== -->
+
+  <header>
+
+    <div class="wrap">
+
+      <nav>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"
+          title="Toggle dark mode">
+          ☾
+        </button>
+
+
+        <div class="nav-right">
+
+          <div class="links">
+
+            <a href="#education">
+              Education
+            </a>
+
+            <a href="#research">
+              Publications
+            </a>
+
+            <a href="#experience">
+              Research
+            </a>
+
+            <a href="#teaching">
+              Teaching
+            </a>
+
+            <a href="#workshops">
+              Workshops
+            </a>
+
+            <a href="#videos">
+              Videos
+            </a>
+
+            <a href="#skills">
+              Skills
+            </a>
+
+            <a href="#contact">
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+    <div class="wrap">
+
+
+      <!-- ===================================================
+           HERO
+      ==================================================== -->
+
+      <section class="hero" style="border: 0">
+
+        <div>
+
+          <div class="eyebrow">
+            <!-- electrical engineering · University of Tehran -->
+          </div>
+
+
+          <h1>
+            Mohammadreza Ghobadzadeh
+          </h1>
+
+
+          <p>
+            I am an M.Sc. graduate in Control Systems Engineering from the University of Tehran, with a research
+            background in control theory, optimization, and machine learning. My master’s thesis focused on
+            learning-based methods for safe and reliable robotic motion planning, inspired by recent advances in
+            predictive control and safe learning. My broader research experience includes perovskite tandem solar-cell
+            optimization, smart-home and microgrid energy management, intelligent transportation systems, autonomous
+            driving, and optimal control.<br><br>
+            Model predictive control, and linear control, along with hands-on experience using Python, MATLAB, CasADi,
+            TensorFlow, COMSOL, Gazebo, CARLA, and related optimization tools. I am particularly interested in
+            developing safe and intelligent methods at the intersection of control, optimization, and machine learning
+            for autonomous and complex engineering systems.
+
+          </p>
+
+
+          <div class="buttons">
+
+            <a class="btn" href="#contact">
+              Get in touch
+            </a>
+
+            <!-- اصلاح شده: target="_blank" برای باز شدن در تب جدید -->
+            <a class="btn" href="cv.pdf" target="_blank" rel="noopener noreferrer">
+              Download CV
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="portrait">
+
+          <img src="my-image.jpg" alt="Mohammadreza Ghobadzadeh">
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           EDUCATION
+      ==================================================== -->
+
+      <section id="education">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Education
+          </h2>
+
+
+          <div class="timeline">
+
+
+            <div class="item">
+
+              <div class="date">
+                Sep 2020 — Dec 2023
+              </div>
+
+
+              <h3>
+                M.Sc. in Control Systems Engineering
+              </h3>
+
+
+              <div class="place">
+                University of Tehran · Iran
+              </div>
+
+
+              <p>
+                <strong class="highlight">Thesis:</strong> Path Planning Using Learning-based Model Predictive Control
+                (LMPC)
+              </p>
+
+            </div>
+
+
+
+            <div class="item">
+
+              <div class="date">
+                Sep 2016 — Jan 2020
+              </div>
+
+
+              <h3>
+                B.Sc. in Electrical Engineering
+              </h3>
+
+
+              <div class="place">
+                University of Mohaghegh Ardabili · Iran
+              </div>
+
+
+              <p>
+                <strong class="highlight">Thesis:</strong> PID tuned using Metaheuristic method for load frequency
+                control of multi-source power system
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           PUBLICATIONS
+      ==================================================== -->
+
+      <section id="research">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Publications
+          </h2>
+
+
+
+          <!-- PUBLICATION 1 -->
+
+          <article class="pub">
+
+
+            <div class="pub-image">
+
+              <a href="paper-1.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="paper-1.jpg" alt="Paper 1 preview">
+              </a>
+
+            </div>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Beyond Exact Current Matching: Fabrication-Tolerant Design of All-Perovskite Tandem Solar Cells via
+                    Surrogate Modeling and Diode-Based J–V Reconstruction
+                  </h3>
+
+                </div>
+
+
+                <span class="pub-year">
+                  2026
+                </span>
+
+              </div>
+
+
+              <p class="pub-authors">
+
+                <strong class="first-author">Mohammadreza Ghobadzadeh</strong> Hamzeh Kashi Yarandi, Maryam Shahrostami, Ali Akbar Haji Zeynali Biyoki, Javad Maleki
+
+              </p>
+
+
+              <p class="pub-venue">
+
+                Published in <span class="pub-journal">Solar RRL</span>
+
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <a class="pub-btn" href="https://onlinelibrary.wiley.com/doi/10.1002/solr.70434" target="_blank"
+                  rel="noreferrer">
+                  ◫ Paper
+                </a>
+
+                <!--
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◉ Code
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  arXiv
+                </a>
+                -->
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PUBLICATION 2 -->
+
+          <article class="pub">
+
+
+            <div class="pub-image">
+
+              <a href="paper-2.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="paper-2.jpg" alt="Paper 2 preview">
+              </a>
+
+            </div>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    CHoKI-Based Robust Optimization of All-Perovskite Tandem Solar Cells under Fabrication Variability
+                  </h3>
+
+                </div>
+
+
+                <span class="pub-year">
+                  2026
+                </span>
+
+              </div>
+
+
+              <p class="pub-authors">
+
+                <strong class="first-author">Mohammadreza Ghobadzadeh</strong> Hamzeh Kashi Yarandi, Javad Maleki, Mehrshad Masoudi, Ali Akbar Haji Zeynali Biyoki
+
+              </p>
+
+
+              <p class="pub-venue">
+
+                Under review in <span class="pub-journal">Energy Conversion and Management: X</span>
+
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <!--
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◫ Paper
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◉ Code
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  arXiv
+                </a>
+                -->
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PUBLICATION 3 -->
+
+          <article class="pub">
+
+
+            <div class="pub-image">
+
+              <a href="paper-3.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="paper-3.jpg" alt="Paper 3 preview">
+              </a>
+
+            </div>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Risk-Aware Design of Nanostructured All-Perovskite Tandem Solar Cells under Fabrication Variability
+                    Using Gaussian Process Surrogates and CVaR Optimization
+                  </h3>
+
+                </div>
+
+
+                <span class="pub-year">
+                  2025
+                </span>
+
+              </div>
+
+
+              <p class="pub-authors">
+
+                <strong class="first-author">Mohammadreza Ghobadzadeh</strong> Javad Maleki, Hamzeh Kashi Yarandi
+
+              </p>
+
+
+              <p class="pub-venue">
+
+                Under review in <span class="pub-journal">Energy & Environmental Materials</span>
+
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <!--
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◫ Paper
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◉ Code
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  arXiv
+                </a>
+                -->
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PUBLICATION 4 -->
+
+          <article class="pub">
+
+
+            <div class="pub-image">
+
+              <a href="paper-4.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="paper-4.jpg" alt="Paper 4 preview">
+              </a>
+
+            </div>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Coalition-Based Energy Management of Grid-Connected Smart Homes in the Day-Ahead Electricity Market
+                  </h3>
+
+                </div>
+
+
+                <span class="pub-year">
+                  2026
+                </span>
+
+              </div>
+
+
+              <p class="pub-authors">
+
+                <strong class="first-author">Mohammadreza Ghobadzadeh</strong> Hamzeh Kashi Yarandi, Mehran Hajiaghapour-Moghimi
+
+              </p>
+
+
+              <p class="pub-venue">
+
+                Under review in <span class="pub-journal"><span class="pub-journal">Scientific Reports</span></span>
+
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <!--
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◫ Paper
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◉ Code
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  arXiv
+                </a>
+                -->
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PUBLICATION 5 -->
+
+          <article class="pub">
+
+
+            <div class="pub-image">
+
+              <a href="paper-5.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="paper-5.jpg" alt="Paper 5 preview">
+              </a>
+
+            </div>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Uncertainty-Aware Transactive Energy Management of Renewable Interconnected Microgrids with Flexible
+                    Cryptocurrency Mining Loads
+                  </h3>
+
+                </div>
+
+
+                <span class="pub-year">
+                  2026
+                </span>
+
+              </div>
+
+
+              <p class="pub-authors">
+
+                <strong class="first-author">Mohammadreza Ghobadzadeh</strong> Hamzeh Kashi Yarandi, Mehran Hajiaghapour-Moghimi
+
+              </p>
+
+
+              <p class="pub-venue">
+
+                Under review in <span class="pub-journal">Scientific Reports</span>
+
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <!--
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◫ Paper
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  ◉ Code
+                </a>
+
+                <a
+                  class="pub-btn"
+                  href="#"
+                >
+                  arXiv
+                </a>
+                -->
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           RESEARCH EXPERIENCE 
+      ==================================================== -->
+
+      <section id="experience">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Research Experience
+          </h2>
+
+
+          <div class="experience">
+
+
+            <!-- 1. University of Tehran - Smart Network Laboratory -->
+
+            <article class="experience-item">
+
+              <div class="experience-header">
+
+                <div class="exp-headline">
+                  <span class="exp-date">2022—Present</span>
+                  <span class="exp-pipe">|</span>
+                  <span class="exp-title">
+                    Research Assistant,
+                    <a href="https://ut.ac.ir/en" target="_blank" rel="noreferrer" class="exp-link">University of
+                      Tehran</a>,
+                    Smart Network Laboratory,
+                    under the supervision of
+                    <a href="https://scholar.google.com/citations?user=eDseLNYAAAAJ&hl=en" target="_blank"
+                      rel="noreferrer" class="exp-link">Prof. Hamed Kebriaei</a>
+                  </span>
+                </div>
+
+              </div>
+
+              <div class="exp-sub">Safe Learning and Learning‑Based Model Predictive Control</div>
+              <p class="exp-desc">Studying safe control methods for systems with learned policies and uncertain
+                dynamics, inspired by research from Prof. Melanie Zeilinger's group at ETH Zurich. The work focuses on
+                Predictive Safety Filters for reinforcement learning and Gaussian Process-based Model Predictive Control
+                for uncertain systems, with an emphasis on uncertainty propagation, constraint satisfaction, safe and
+                terminal sets, recursive feasibility, and stability.</p>
+
+              <div class="exp-sub">Cooperative Control for Multi‑Vessel Ship Towing Using Distributed MPC</div>
+              <p class="exp-desc">Conducting research on distributed Model Predictive Control (MPC) for cooperative
+                multi-vessel ship towing systems, with emphasis on coordinated towing-force allocation, trajectory
+                tracking, speed regulation, and collision avoidance through a multi-layer control architecture. Advanced
+                learning-based approaches are investigated to enhance maneuverability in dynamic environments.</p>
+
+            </article>
+
+
+
+            <!-- 2. University of Tehran - Advanced Control Systems Lab -->
+
+            <article class="experience-item">
+
+              <div class="experience-header">
+
+                <div class="exp-headline">
+                  <span class="exp-date">2024—Present</span>
+                  <span class="exp-pipe">|</span>
+                  <span class="exp-title">
+                    Research Assistant,
+                    <a href="https://ut.ac.ir/en" target="_blank" rel="noreferrer" class="exp-link">University of
+                      Tehran</a>,
+                    <a href="https://acsl.ut.ac.ir/" target="_blank" rel="noreferrer" class="exp-link">Advanced Control
+                      Systems Lab (ACSL)</a>,
+                    under the supervision of
+                    <a href="https://scholar.google.com/citations?user=R5N3R7gAAAAJ&hl=en" target="_blank"
+                      rel="noreferrer" class="exp-link">Prof. Mohammad Javad Yazdanpanah</a>
+                    and
+                    <a href="https://scholar.google.com/citations?user=Cs1vFs0AAAAJ&hl=en" target="_blank"
+                      rel="noreferrer" class="exp-link">Prof. Abolfazl Yaghmaei</a>
+                  </span>
+                </div>
+
+              </div>
+
+              <div class="exp-sub">Interaction‑Aware Optimal‑Control Reconstruction of Lane‑Change Trajectories</div>
+              <p class="exp-desc">Integrating NGSIM data preprocessing with a multi-agent constrained optimal-control
+                framework for joint reconstruction of the ego vehicle and relevant surrounding vehicles. Incorporating
+                individualized Enhanced Intelligent Driver Model (EIDM) car-following behavior, physical and interaction
+                constraints, and MOBIL-based lane-change incentive and safety information to generate dynamically
+                feasible trajectories while improving physical and interaction consistency.</p>
+
+              <div class="exp-sub">Prediction‑Based Barrier‑Function Sliding‑Mode Control for Nonlinear Systems with
+                Input Delay and Disturbance Estimation</div>
+              <p class="exp-desc">Developing a prediction-based sliding-mode control framework for nonlinear systems
+                with input delay and unknown disturbances. Combining nonlinear disturbance observation and future
+                disturbance estimation with a new barrier-function SMC to compensate for delayed actuation and provide
+                robust control without requiring prior knowledge of the disturbance bound in controller implementation.
+                Analyzing sliding-variable invariance, prediction-error bounds, and closed-loop robustness, with
+                extensions toward multichannel and robotic systems.</p>
+
+            </article>
+
+
+
+            <!-- 3. Shahid Beheshti University -->
+
+            <article class="experience-item">
+
+              <div class="experience-header">
+
+                <div class="exp-headline">
+                  <span class="exp-date">2025—Present</span>
+                  <span class="exp-pipe">|</span>
+                  <span class="exp-title">
+                    Research Assistant,
+                    <a href="https://en.sbu.ac.ir/" target="_blank" rel="noreferrer" class="exp-link">Shahid Beheshti
+                      University</a>,
+                    under the supervision of
+                    <a href="https://scholar.google.com/citations?user=UqMD3HkAAAAJ&hl=en" target="_blank"
+                      rel="noreferrer" class="exp-link">Prof. Mehran Hajiaghapour‑Moghimi</a>
+                  </span>
+                </div>
+
+              </div>
+
+              <div class="exp-sub">Coalition‑Based Energy Management of Grid‑Connected Smart Homes in the Day‑Ahead
+                Electricity Market</div>
+              <p class="exp-desc">Investigating coalition-based energy management for smart homes with renewable
+                generation, battery storage, and flexible loads using a two-stage stochastic MILP. Developing a tunable
+                inter-household energy-exchange mechanism to study the trade-off between cooperation, operating cost,
+                and grid-level performance, with scalability demonstrated for communities of up to 200 homes.</p>
+
+              <div class="exp-sub">Uncertainty‑Aware Transactive Energy Management of Renewable Interconnected
+                Microgrids with Flexible Cryptocurrency Mining Loads</div>
+              <p class="exp-desc">Developing an uncertainty-aware transactive energy management framework for renewable
+                interconnected microgrids, modeling cryptocurrency mining as a flexible, profit-driven demand resource.
+                Combining stochastic programming and IGDT to coordinate energy storage, local trading, and flexible
+                mining under renewable and electricity-price uncertainty, improving renewable utilization, energy
+                balancing, and system profitability.</p>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           TEACHING
+      ==================================================== -->
+
+      <section id="teaching">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Teaching Assistantships
+          </h2>
+
+
+          <div class="timeline">
+
+
+            <!-- 1. University of Tehran -->
+
+            <div class="item">
+
+              <div class="date">
+                M.Sc.
+              </div>
+
+
+              <h3>
+                University of Tehran · Iran
+              </h3>
+
+
+
+
+              <p><strong class="course-label">Course:</strong></p>
+              <ul class="course-list">
+                <li>Distributed Optimization and Learning</li>
+                <li>Advanced Robotics</li>
+                <li>Nonlinear Control</li>
+                <li>Optimal Control</li>
+                <li>Effective Techniques in Control Systems</li>
+              </ul>
+
+            </div>
+
+
+
+            <!-- 2. K. N. Toosi University of Technology -->
+
+            <div class="item">
+
+              <div class="date">
+                M.Sc.
+              </div>
+
+
+              <h3>
+                K. N. Toosi University of Technology · Iran
+              </h3>
+
+
+
+              <p><strong class="course-label">Course:</strong></p>
+              <ul class="course-list">
+                <li>Model Predictive Control</li>
+              </ul>
+
+            </div>
+
+
+
+            <!-- 3. University of Mohaghegh Ardabili -->
+
+            <div class="item">
+
+              <div class="date">
+                B.Sc.
+              </div>
+
+
+              <h3>
+                University of Mohaghegh Ardabili · Iran
+              </h3>
+
+
+
+              <p><strong class="course-label">Course:</strong></p>
+              <ul class="course-list">
+                <li>Linear Control</li>
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           WORKSHOPS
+      ==================================================== -->
+
+      <section id="workshops">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Workshops &amp; Educational Materials
+          </h2>
+
+
+          <div class="timeline">
+
+
+            <!-- Item 1 -->
+
+            <div class="item workshop-item">
+
+              <p>
+                <span class="exp-date">2024—2025</span>
+                <span class="exp-pipe">|</span>
+                <span class="exp-title">Designed and conducted advanced
+                  <span class="highlight">CasADi</span> workshops at the
+                  University of Tehran, K. N. Toosi University of Technology,
+                  and the University of Mohaghegh Ardabili, focusing on
+                  symbolic modeling, optimization, and control applications.</span>
+              </p>
+
+            </div>
+
+
+
+            <!-- Item 2 -->
+
+            <div class="item workshop-item">
+
+              <p>
+                <span class="exp-date">2024—2025</span>
+                <span class="exp-pipe">|</span>
+                <span class="exp-title">Developed presentations and hands‑on exercises for
+                  <span class="highlight">MATLAB</span>,
+                  <span class="highlight">CasADi</span>,
+                  <span class="highlight">CVX</span>,
+                  <span class="highlight">CVXPY</span>, and
+                  <span class="highlight">YALMIP</span> to help students
+                  implement optimization‑ and control‑based projects.</span>
+              </p>
+
+            </div>
+
+
+
+            <!-- Item 3 -->
+
+            <div class="item workshop-item">
+
+              <p>
+                <span class="exp-date">2024—2025</span>
+                <span class="exp-pipe">|</span>
+                <span class="exp-title">Mentored students on course projects by providing references,
+                  guidance on technical reports, novelty development, and code
+                  implementation.</span>
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           WORKSHOPS VIDEOS
+      ==================================================== -->
+
+      <section id="videos">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Workshops Videos
+          </h2>
+
+
+          <!-- VIDEO 1 -->
+
+          <article class="pub">
+
+
+            <a href="https://www.youtube.com/playlist?list=PLJ5BV5EDkg3s" target="_blank" rel="noreferrer"
+              class="pub-image video-thumb" title="Optimal Control with CasADi">
+              <img src="playlist-img1.jpg" alt="Optimal Control with CasADi thumbnail">
+            </a>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Optimal Control with CasADi
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <p class="pub-desc">
+                This workshop was organized in 2024 and 2025 for the
+                <span class="highlight">Optimal Control</span> course at the
+                <span class="highlight">University of Tehran</span>, under the instruction of
+                <span class="highlight">Prof. Mohammad Javad Yazdanpanah</span>, to introduce practical numerical
+                optimal control using
+                <span class="highlight">CasADi</span>. It covered symbolic modeling, algorithmic differentiation,
+                nonlinear optimization, dynamical system simulation, direct methods such as single shooting and multiple
+                shooting, trajectory optimization and dynamic programming. Workshop
+                <span class="highlight">codes and examples</span> are available in the accompanying
+                <span class="highlight">GitHub repository</span>.
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <a class="pub-btn" href="https://www.youtube.com/playlist?list=PLJ5BV5EDkg3s" target="_blank"
+                  rel="noreferrer">
+                  ▶ Watch Playlist
+                </a>
+
+                <a class="pub-btn" href="https://github.com/Mohammadreza-Ghobadzadeh/Workshop-Materials" target="_blank"
+                  rel="noreferrer">
+                  ⌨ Code
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- VIDEO 2 -->
+
+          <article class="pub">
+
+
+            <a href="https://www.youtube.com/playlist?list=PLU_FeksUzG_k" target="_blank" rel="noreferrer"
+              class="pub-image video-thumb" title="Distributed Optimization and Learning with CasADi & CVXPY">
+              <img src="playlist-img2.jpg" alt="Distributed Optimization and Learning thumbnail">
+            </a>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Distributed Optimization and Learning with CasADi &amp; CVXPY
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <p class="pub-desc">
+                This workshop was organized in 2023 for the
+                <span class="highlight">Distributed Optimization and Learning</span> course at the
+                <span class="highlight">University of Tehran</span>, under the instruction of
+                <span class="highlight">Prof. Hamed Kebriaei</span>, with a focus on practical optimization using
+                <span class="highlight">CasADi</span> and
+                <span class="highlight">CVXPY</span>. It covered convex and nonconvex optimization, as well as
+                distributed and decentralized optimization methods, including primal-dual approaches, ADMM-based
+                algorithms, and other related techniques.
+                <span class="highlight">Examples and source code</span> are available in the workshop's
+                <span class="highlight">GitHub repository</span>.
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <a class="pub-btn" href="https://www.youtube.com/playlist?list=PLU_FeksUzG_k" target="_blank"
+                  rel="noreferrer">
+                  ▶ Watch Playlist
+                </a>
+
+                <a class="pub-btn" href="https://github.com/Mohammadreza-Ghobadzadeh/Workshop-Materials" target="_blank"
+                  rel="noreferrer">
+                  ⌨ Code
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- VIDEO 3 -->
+
+          <article class="pub">
+
+
+            <a href="https://www.youtube.com/playlist?list=PLUtae4hCv9Go" target="_blank" rel="noreferrer"
+              class="pub-image video-thumb" title="Model Predictive Control Using CasADi & YALMIP">
+              <img src="playlist-img3.jpg" alt="Model Predictive Control thumbnail">
+            </a>
+
+
+            <div class="pub-content">
+
+              <div class="pub-header">
+
+                <div>
+
+                  <h3>
+                    Model Predictive Control Using CasADi &amp; YALMIP
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <p class="pub-desc">
+                This workshop was organized in 2025 for the
+                <span class="highlight">Model Predictive Control</span> course at
+                <span class="highlight">K. N. Toosi University of Technology</span>, under the instruction of
+                <span class="highlight">Prof. Amirhossein Nikoofard</span>, with a focus on practical MPC implementation
+                using
+                <span class="highlight">CasADi</span> and
+                <span class="highlight">YALMIP</span>. It covered finite-horizon optimal control, system modeling,
+                constraints, numerical optimization, and Tube MPC, including LMI-based design and invariant-set
+                computation using YALMIP.
+                <span class="highlight">Examples and source code</span> are available in the workshop's
+                <span class="highlight">GitHub repository</span>.
+              </p>
+
+
+              <div class="pub-buttons">
+
+                <a class="pub-btn" href="https://www.youtube.com/playlist?list=PLUtae4hCv9Go" target="_blank"
+                  rel="noreferrer">
+                  ▶ Watch Playlist
+                </a>
+
+                <a class="pub-btn" href="https://github.com/Mohammadreza-Ghobadzadeh/Workshop-Materials" target="_blank"
+                  rel="noreferrer">
+                  ⌨ Code
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           SKILLS (با bullet و فاصله‌های اصلاح‌شده)
+      ==================================================== -->
+
+      <section id="skills">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Skills
+          </h2>
+
+
+          <div class="skills-container">
+
+
+            <!-- B.Sc. - University of Mohaghegh Ardabili -->
+
+            <div class="skill-degree">
+
+              <h3>B.Sc.</h3>
+              <div class="degree-place">University of Mohaghegh Ardabili · Iran</div>
+
+              <div class="skill-block">
+                <span class="skill-label">Programming Languages:</span>
+                <span class="skill-items">
+                  <span class="highlight">Matlab</span>
+                  <span class="highlight">|</span>
+                  <span class="highlight">C++</span>
+                </span>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Modeling, Simulation Tools and Embedded Systems:</span>
+                <span class="skill-items">
+                  <span class="highlight">Simulink</span>
+                  <span class="highlight">|</span>
+                  <span class="highlight">Proteus</span>
+                  <span class="highlight">|</span>
+                  <span class="highlight">CodeVisionAVR</span>
+                </span>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Documentation Skills:</span>
+                <span class="skill-items">
+                  <span class="highlight">Microsoft Office Suite</span>
+                </span>
+              </div>
+
+            </div>
+
+
+
+            <!-- M.Sc. - University of Tehran -->
+
+            <div class="skill-degree">
+
+              <h3>M.Sc.</h3>
+              <div class="degree-place">University of Tehran · Iran</div>
+
+              <div class="skill-block">
+                <span class="skill-label">Programming Languages:</span>
+                <span class="skill-items">
+                  <span class="highlight">Python</span>
+                  <span class="highlight">|</span>
+                  <span class="highlight">Julia</span>
+                </span>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Optimization Tools and Mathematical Libraries</span>
+                <div class="skill-sub">
+                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-items">
+                    <span class="highlight">CasADi</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">YALMIP</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">GAMS</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">CVX</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">CVXPy</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">Do-MPC</span>
+                  </span>
+                </div>
+                <div class="skill-sub">
+                  <span class="skill-label">Familiar with:</span>
+                  <span class="skill-items">
+                    <span class="highlight">Pyomo</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Machine Learning and Data Science</span>
+                <div class="skill-sub">
+                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-items">
+                    <span class="highlight">TensorFlow</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">Scikit-learn</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">GPyTorch</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">Keras</span>
+                  </span>
+                </div>
+                <div class="skill-sub">
+                  <span class="skill-label">Familiar with:</span>
+                  <span class="skill-items">
+                    <span class="highlight">OpenAI Gym</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">PyTorch</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">GPy</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Modeling and Simulation Tools</span>
+                <div class="skill-sub">
+                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-items">
+                    <span class="highlight">Simulink</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">Gazebo</span>
+                  </span>
+                </div>
+                <div class="skill-sub">
+                  <span class="skill-label">Familiar with:</span>
+                  <span class="skill-items">
+                    <span class="highlight">COMSOL Multiphysics</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">CARLA</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Electronic Design and Circuit Simulation:</span>
+                <div class="skill-sub">
+                  <span class="skill-label">Familiar with:</span>
+                  <span class="skill-items">
+                    <span class="highlight">Altium Designer</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">LTspice</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Robotics and Embedded Systems:</span>
+                <div class="skill-sub">
+                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-items">
+                    <span class="highlight">ROS</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">STM32</span>
+                  </span>
+                </div>
+                <div class="skill-sub">
+                  <span class="skill-label">Familiar with:</span>
+                  <span class="skill-items">
+                    <span class="highlight">NVIDIA Jetson</span>
+                    <span class="highlight">|</span>
+                    <span class="highlight">Raspberry Pi</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <span class="skill-label">Documentation Skills:</span>
+                <span class="skill-items">
+                  <span class="highlight">LATEX</span>
+                  <span class="highlight">|</span>
+                  <span class="highlight">Microsoft Office Suite</span>
+                </span>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ===================================================
+           CONTACT
+      ==================================================== -->
+
+      <section id="contact">
+
+        <div class="section-box">
+
+          <h2 class="section-title">
+            Contact
+          </h2>
+
+
+          <p class="contact-text">
+
+            For academic collaboration, research opportunities
+            or professional inquiries:
+
+          </p>
+
+
+          <div class="buttons">
+
+            <a class="btn primary" href="mailto:ghobadzadehmohammadreza@gmail.com">
+              Email
+            </a>
+
+
+            <a class="btn" href="https://github.com/Mohammadreza-Ghobadzadeh" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+
+
+            <a class="btn" href="https://linkedin.com/in/mohammadreza-ghobadzadeh-8a11a2224" target="_blank"
+              rel="noreferrer">
+              LinkedIn
+            </a>
+
+
+            <a class="btn" href="https://scholar.google.com/citations?user=6gKUK8EAAAAJ&hl=en&oi=ao" target="_blank"
+              rel="noreferrer">
+              Google Scholar
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer class="wrap">
+
+    © 2026 Mohammadreza Ghobadzadeh | Personal Academic Website
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       THEME SCRIPT
+  ======================================================== -->
+
+  <script>
+
+    (() => {
+
+      const root =
+        document.documentElement;
+
+
+      const button =
+        document.getElementById(
+          "themeToggle"
+        );
+
+
+      const saved =
+        localStorage.getItem(
+          "theme"
+        );
+
+
+      const preferred =
+        window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches
+          ? "dark"
+          : "light";
+
+
+      const theme =
+        saved || preferred;
+
+
+      function applyTheme(value) {
+
+        root.dataset.theme =
+          value;
+
+
+        button.textContent =
+          value === "dark"
+            ? "☀"
+            : "☾";
+
+
+        button.title =
+          value === "dark"
+            ? "Switch to light mode"
+            : "Switch to dark mode";
+
+
+        button.setAttribute(
+          "aria-label",
+          button.title
+        );
+
+      }
+
+
+      applyTheme(theme);
+
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const next =
+            root.dataset.theme === "dark"
+              ? "light"
+              : "dark";
+
+
+          localStorage.setItem(
+            "theme",
+            next
+          );
+
+
+          applyTheme(next);
+
+        }
+      );
+
+    })();
+
+  </script>
+
+
+</body>
+
+</html>
