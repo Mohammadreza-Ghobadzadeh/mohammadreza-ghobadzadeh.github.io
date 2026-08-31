@@ -1575,6 +1575,334 @@
       }
 
     }
+
+    /* =========================================================
+       MOBILE / TABLET HARDENING
+       Keeps the desktop layout intact while making the page
+       comfortable on narrow screens and preventing horizontal
+       overflow from long academic titles/text.
+    ========================================================= */
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+    .wrap,
+    .section-box,
+    .pub,
+    .pub-content,
+    .experience-item,
+    .item,
+    .skill-degree {
+      min-width: 0;
+    }
+
+    .hero > *,
+    .pub > *,
+    .pub-header > *,
+    .nav-right,
+    .links {
+      min-width: 0;
+    }
+
+    .hero p,
+    .item p,
+    .pub p,
+    .exp-desc,
+    .contact-text,
+    .exp-headline,
+    .exp-sub,
+    .pub h3,
+    .skill-degree,
+    .skill-items,
+    .skill-label {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .pub h3 {
+      max-width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --max: 1180px;
+      }
+
+      .wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 32px;
+      }
+
+      .portrait {
+        max-width: 280px;
+        margin-top: 92px;
+      }
+
+      .pub {
+        grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .pub-header {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      header {
+        position: sticky;
+      }
+
+      nav {
+        height: 62px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 32px;
+      }
+
+      .hero > div:first-child {
+        width: 100%;
+      }
+
+      .portrait {
+        order: 2;
+        width: min(100%, 300px);
+        margin: 16px auto 0;
+        justify-self: center;
+      }
+
+      .pub {
+        grid-template-columns: 1fr;
+      }
+
+      .pub-image {
+        width: 100%;
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+      }
+
+      .pub-image img {
+        object-fit: cover;
+      }
+
+      .pub-content {
+        min-height: 0;
+      }
+
+      .experience-item,
+      .item {
+        padding-left: 22px;
+      }
+
+      .skill-degree {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .wrap {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      nav {
+        height: 58px;
+      }
+
+      .theme-toggle {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero {
+        padding: 28px 0 42px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 12vw, 54px);
+        line-height: 0.99;
+        letter-spacing: -0.045em;
+        margin: 12px 0 20px;
+      }
+
+      .hero p {
+        font-size: 15px;
+        line-height: 1.75;
+        text-align: left;
+      }
+
+      .buttons {
+        width: 100%;
+        gap: 9px;
+      }
+
+      .btn {
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: center;
+        padding: 10px 13px;
+      }
+
+      .portrait {
+        width: min(100%, 260px);
+        aspect-ratio: 3 / 4;
+        margin-top: 10px;
+      }
+
+      section {
+        padding: 8px 0;
+      }
+
+      .section-box {
+        border-radius: 13px;
+        padding: 18px 14px;
+      }
+
+      .section-title {
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+
+      .item,
+      .experience-item {
+        padding: 0 0 28px 19px;
+      }
+
+      .item::before,
+      .experience-item::before {
+        left: -4.5px;
+      }
+
+      .item h3 {
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      .item p,
+      .exp-desc,
+      .skill-items,
+      .contact-text,
+      .pub p {
+        font-size: 13.5px;
+        line-height: 1.72;
+      }
+
+      .pub {
+        gap: 12px;
+        margin-bottom: 15px;
+      }
+
+      .pub-image {
+        aspect-ratio: 16 / 10;
+        border-radius: 10px;
+      }
+
+      .pub-content {
+        padding: 16px 14px;
+        border-radius: 10px;
+      }
+
+      .pub-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+      }
+
+      .pub h3 {
+        font-size: 19px;
+        line-height: 1.38;
+        margin-bottom: 4px;
+      }
+
+      .pub-year {
+        font-size: 12px;
+      }
+
+      .pub-buttons {
+        gap: 7px;
+        margin-top: 12px;
+      }
+
+      .pub-btn {
+        padding: 7px 10px;
+        font-size: 11.5px;
+      }
+
+      .skill-degree {
+        border-radius: 13px;
+        padding: 18px 15px;
+      }
+
+      .skill-degree h3 {
+        font-size: 23px;
+      }
+
+      .skill-degree .skill-block {
+        padding-left: 17px;
+      }
+
+      .course-list {
+        padding-left: 18px;
+        font-size: 13.5px;
+      }
+
+      footer {
+        padding: 28px 14px 40px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .wrap {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      h1 {
+        font-size: clamp(34px, 11.5vw, 46px);
+      }
+
+      .hero p {
+        font-size: 14.5px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section-box {
+        padding: 16px 12px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+    }
+
   </style>
 
 </head>
@@ -2799,7 +3127,7 @@
               <div class="skill-block">
                 <span class="skill-label">Optimization Tools and Mathematical Libraries</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-label">Expert in:</span>
                   <span class="skill-items">
                     <span class="highlight">CasADi</span>
                     <span class="highlight">|</span>
@@ -2825,7 +3153,7 @@
               <div class="skill-block">
                 <span class="skill-label">Machine Learning and Data Science</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-label">Expert in:</span>
                   <span class="skill-items">
                     <span class="highlight">TensorFlow</span>
                     <span class="highlight">|</span>
@@ -2851,7 +3179,7 @@
               <div class="skill-block">
                 <span class="skill-label">Modeling and Simulation Tools</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-label">Expert in:</span>
                   <span class="skill-items">
                     <span class="highlight">Simulink</span>
                     <span class="highlight">|</span>
@@ -2883,7 +3211,7 @@
               <div class="skill-block">
                 <span class="skill-label">Robotics and Embedded Systems</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert In:</span>
+                  <span class="skill-label">Expert in:</span>
                   <span class="skill-items">
                     <span class="highlight">ROS</span>
                     <span class="highlight">|</span>
