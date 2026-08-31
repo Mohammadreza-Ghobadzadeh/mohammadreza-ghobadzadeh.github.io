@@ -1673,20 +1673,34 @@
       }
 
       .hero {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 10px;
         padding-top: 32px;
       }
 
+      /* Mobile order: name → portrait → about text → buttons */
       .hero > div:first-child {
-        width: 100%;
+        display: contents;
+      }
+
+      .hero h1 {
+        order: 1;
       }
 
       .portrait {
         order: 2;
         width: min(100%, 300px);
         margin: 16px auto 0;
-        justify-self: center;
+        align-self: center;
+      }
+
+      .hero p {
+        order: 3;
+      }
+
+      .hero .buttons {
+        order: 4;
       }
 
       .pub {
@@ -3127,7 +3141,7 @@
               <div class="skill-block">
                 <span class="skill-label">Optimization Tools and Mathematical Libraries</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert in:</span>
+                  <span class="skill-label">Expert In:</span>
                   <span class="skill-items">
                     <span class="highlight">CasADi</span>
                     <span class="highlight">|</span>
@@ -3153,7 +3167,7 @@
               <div class="skill-block">
                 <span class="skill-label">Machine Learning and Data Science</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert in:</span>
+                  <span class="skill-label">Expert In:</span>
                   <span class="skill-items">
                     <span class="highlight">TensorFlow</span>
                     <span class="highlight">|</span>
@@ -3179,7 +3193,7 @@
               <div class="skill-block">
                 <span class="skill-label">Modeling and Simulation Tools</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert in:</span>
+                  <span class="skill-label">Expert In:</span>
                   <span class="skill-items">
                     <span class="highlight">Simulink</span>
                     <span class="highlight">|</span>
@@ -3211,7 +3225,7 @@
               <div class="skill-block">
                 <span class="skill-label">Robotics and Embedded Systems</span>
                 <div class="skill-sub">
-                  <span class="skill-label">Expert in:</span>
+                  <span class="skill-label">Expert In:</span>
                   <span class="skill-items">
                     <span class="highlight">ROS</span>
                     <span class="highlight">|</span>
